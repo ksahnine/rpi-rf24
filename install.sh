@@ -28,11 +28,8 @@ echo "** This is a modified script to build a Docker image - Updated by KSE **"
 if [[ $DORF24Gateway > 0 ]]
 then
 	echo ""
-	echo "Install ncurses library? (Recommended for RF24Gateway)"
-	read answer
-    case ${answer^^} in
-		Y ) sudo apt-get install -y libncurses5-dev
-	esac
+	echo "Install ncurses library (Recommended for RF24Gateway)"
+    sudo apt-get install -y libncurses5-dev
 	echo ""
 fi
 
@@ -78,11 +75,8 @@ then
 
 	sudo make install -B -C ${ROOT_PATH}/RF24Gateway
 	
-    echo ""; echo -n "Do you want to build an RF24Gateway example?"
-    read answer
-    case ${answer^^} in
-       Y ) make -B -C${ROOT_PATH}/RF24Gateway/examples/ncurses; echo ""; echo "Complete, to run the example, cd to rf24libs/RF24Gateway/examples/ncurses and enter  sudo ./RF24Gateway_ncurses";;
-    esac	
+    echo ""; echo -n "Build an RF24Gateway example"
+    make -B -C${ROOT_PATH}/RF24Gateway/examples/ncurses; echo ""; echo "Complete, to run the example, cd to rf24libs/RF24Gateway/examples/ncurses and enter  sudo ./RF24Gateway_ncurses";;
 fi
 
 
