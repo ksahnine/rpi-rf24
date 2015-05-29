@@ -75,8 +75,8 @@ then
 
 	sudo make install -B -C ${ROOT_PATH}/RF24Gateway
 	
-    echo ""; echo -n "Build an RF24Gateway example"
-    make -B -C${ROOT_PATH}/RF24Gateway/examples/ncurses; echo ""; echo "Complete, to run the example, cd to rf24libs/RF24Gateway/examples/ncurses and enter  sudo ./RF24Gateway_ncurses";;
+    #echo ""; echo -n "Build an RF24Gateway example"
+    #make -B -C${ROOT_PATH}/RF24Gateway/examples/ncurses; echo ""; echo "Complete, to run the example, cd to rf24libs/RF24Gateway/examples/ncurses and enter  sudo ./RF24Gateway_ncurses";;
 fi
 
 
