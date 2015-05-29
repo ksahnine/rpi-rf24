@@ -12,7 +12,7 @@ DORF24Mesh=1
 DORF24Gateway=1
 
 ## pretty ugly
-git global --local http.sslVerify false
+git config --global http.sslVerify false
 
 echo""
 echo "RF24 libraries installer by TMRh20"
