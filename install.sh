@@ -72,6 +72,10 @@ then
 	echo ""
 	git clone https://github.com/tmrh20/RF24Gateway.git ${ROOT_PATH}/RF24Gateway
 	echo ""
+
+    echo "Changing RPi CE and CSN pins"
+    ed -s rf24libs/RF24Gateway/examples/ncurses/RF24Gateway_ncurses.cpp <<< $'/RF24 radio/s/22,0/25,8/g\nw'
+
 	sudo make install -B -C ${ROOT_PATH}/RF24Gateway
 	
     echo ""; echo -n "Do you want to build an RF24Gateway example?"
