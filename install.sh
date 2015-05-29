@@ -11,6 +11,9 @@ DORF24Network=1
 DORF24Mesh=1
 DORF24Gateway=1
 
+## pretty ugly
+git global --local http.sslVerify false
+
 echo""
 echo "RF24 libraries installer by TMRh20"
 echo "report issues at https://github.com/TMRh20/RF24/issues"
